@@ -25,8 +25,16 @@ jobs:
             DEVELOPMENT_TEAM="" \
             -destination 'generic/platform=iOS'
 
-      - name: Upload archive artifact
+      - name: Package IPA
+        run: |
+          mkdir -p build/ipa/Payload
+          cp -r build/VibeSurveyor.xcarchive/Products/Applications/VibeSurveyor.app \
+            build/ipa/Payload/VibeSurveyor.app
+          cd build/ipa
+          zip -r ../VibeSurveyor.ipa Payload/
+
+      - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
-          name: VibeSurveyor-xcarchive
-          path: build/VibeSurveyor.xcarchive
+          name: VibeSurveyor-IPA
+          path: build/VibeSurveyor.ipa
