@@ -1,0 +1,52 @@
+name: Build VibeSurveyor
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '15'
+
+      - name: Build and Test
+        run: |
+          xcodebuild clean test \
+            -scheme VibeSurveyor \
+            -project VibeSurveyor/VibeSurveyor.xcodeproj \
+            -destination 'platform=iOS Simulator,OS=latest,name=iPhone 15' \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Archive
+        run: |
+          xcodebuild archive \
+            -scheme VibeSurveyor \
+            -project VibeSurveyor/VibeSurveyor.xcodeproj \
+            -archivePath build/VibeSurveyor.xcarchive \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            DEVELOPMENT_TEAM="" \
+            -destination 'generic/platform=iOS'
+
+      - name: Export IPA
+        run: |
+          xcodebuild -exportArchive \
+            -archivePath build/VibeSurveyor.xcarchive \
+            -exportPath build/ipa \
+            -exportOptionsPlist ExportOptions.plist
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: VibeSurveyor-IPA
+          path: build/ipa/*.ipa
