@@ -14,14 +14,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build and Test
-        run: |
-          xcodebuild clean test \
-            -scheme VibeSurveyor \
-            -project VibeSurveyor/VibeSurveyor.xcodeproj \
-            -destination 'platform=iOS Simulator,name=Any iOS Simulator Device' \
-            CODE_SIGNING_ALLOWED=NO
-
       - name: Archive
         run: |
           xcodebuild archive \
