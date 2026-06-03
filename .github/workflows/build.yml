@@ -19,7 +19,7 @@ jobs:
           xcodebuild clean test \
             -scheme VibeSurveyor \
             -project VibeSurveyor/VibeSurveyor.xcodeproj \
-            -destination 'platform=iOS Simulator,OS=latest,name=iPhone 15' \
+            -destination 'platform=iOS Simulator,name=Any iOS Simulator Device' \
             CODE_SIGNING_ALLOWED=NO
 
       - name: Archive
