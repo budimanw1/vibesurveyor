@@ -15,6 +15,8 @@
 		AA0000000000000000000006 /* ImageWatermarkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000106 /* ImageWatermarkProcessor.swift */; };
 		AA0000000000000000000007 /* TelemetrySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000107 /* TelemetrySnapshot.swift */; };
 		AA0000000000000000000008 /* PhotoFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000108 /* PhotoFileManager.swift */; };
+		AA0000000000000000000009 /* ShutterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000110 /* ShutterButton.swift */; };
+		AA0000000000000000000010 /* ProjectNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000111 /* ProjectNameField.swift */; };
 		AA0000000000000000000011 /* TelemetrySnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000201 /* TelemetrySnapshotTests.swift */; };
 		AA0000000000000000000012 /* LocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000202 /* LocationManagerTests.swift */; };
 		AA0000000000000000000013 /* MotionManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000203 /* MotionManagerTests.swift */; };
@@ -34,6 +36,8 @@
 		AA0000000000000000000107 /* TelemetrySnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetrySnapshot.swift; sourceTree = "<group>"; };
 		AA0000000000000000000108 /* PhotoFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFileManager.swift; sourceTree = "<group>"; };
 		AA0000000000000000000109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA0000000000000000000110 /* ShutterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterButton.swift; sourceTree = "<group>"; };
+		AA0000000000000000000111 /* ProjectNameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectNameField.swift; sourceTree = "<group>"; };
 		AA0000000000000000000201 /* TelemetrySnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetrySnapshotTests.swift; sourceTree = "<group>"; };
 		AA0000000000000000000202 /* LocationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerTests.swift; sourceTree = "<group>"; };
 		AA0000000000000000000203 /* MotionManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManagerTests.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 				AA0000000000000000000106 /* ImageWatermarkProcessor.swift */,
 				AA0000000000000000000107 /* TelemetrySnapshot.swift */,
 				AA0000000000000000000108 /* PhotoFileManager.swift */,
+				AA0000000000000000000110 /* ShutterButton.swift */,
+				AA0000000000000000000111 /* ProjectNameField.swift */,
 				AA0000000000000000000109 /* Info.plist */,
 			);
 			path = VibeSurveyor;
@@ -182,6 +188,8 @@
 				AA0000000000000000000006 /* ImageWatermarkProcessor.swift in Sources */,
 				AA0000000000000000000007 /* TelemetrySnapshot.swift in Sources */,
 				AA0000000000000000000008 /* PhotoFileManager.swift in Sources */,
+				AA0000000000000000000009 /* ShutterButton.swift in Sources */,
+				AA0000000000000000000010 /* ProjectNameField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
